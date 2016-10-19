@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    {% if node_list %}
+        <div class="row">
+        {% for node in node_list %}
+            {% for key , value in node.items %}
+                <div class="large-12 columns">
+                <b>{{ key }} :</b> {{ value }}
+                </div>
+            {% endfor %}
+        </div>
+            <br />
+            <a href={% url 'node_edit' node.nid %} class="small button">Edit</a> <br />
+            <a href={% url 'node_delete' node.nid %} class="small button">Delete</a>
+        {% endfor  %}
+    {% else %}
+        Nothing to show
+    {% endif %}
+
+{% endblock %}

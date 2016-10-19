@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <title>{% block title %}Django Pycql{% endblock %}</title>
+        <link href="/static/foundation/css/foundation.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/foundation/css/normalize.css" rel="stylesheet" type="text/css"/>
+    {% endblock %}
+</head>
+<body>
+
+<!-- Header and Nav -->
+
+<div class="row">
+    <div class="large-3 columns">
+        <img src="/static/foundation/img/logo.png" />
+    </div>
+    <div class="large-9 columns">
+        <ul class="button-group right">
+            <li><a href="/node/index/" class="button">Home</a></li>
+            <li><a href="/node/add/" class="button">Add Node</a></li>
+            <li><a href="#" class="button">Login</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- End Header and Nav -->
+
+
+
+{% block content-wrapper %}
+    <!-- First Band (Image) -->
+
+    <div class="row">
+        <div class="large-12 columns">
+            {% block header %}
+            {% endblock %}
+
+        </div>
+    </div>
+    <!-- Second Band (Image Left with Text) -->
+
+
+    <!-- Third Band (Image Right with Text) -->
+    <div class="row">
+        <div class="large-4 columns">
+            {% block sidebar %}
+            {% endblock %}
+
+        </div>
+
+        <div class="large-8 columns">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+
+    <footer class="row">
+        {% block footer %}
+            <div class="large-12 columns">
+                <hr />
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>&copy; Labeed Rushdy.</p>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </footer>
+
+
+
+
+
+
+{% endblock %}
+
+<script src="/static/foundation/js/foundation.min.js"></script>
+
+<!-- <script src="/static/foundation/js/foundation/foundation.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.interchange.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.abide.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.dropdown.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.placeholder.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.forms.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.alerts.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.magellan.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.reveal.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.tooltips.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.clearing.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.cookie.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.joyride.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.orbit.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.section.js"></script>
+
+<script src="/static/foundation/js/foundation/foundation.topbar.js"></script>
+
+ -->
+
+<script>
+    $(document).foundation();
+</script>
+
+</body>
+</html>
+
+
